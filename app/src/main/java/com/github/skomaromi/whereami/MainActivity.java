@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     @BindView(R.id.tv_country_value) TextView tv_country_value;
 
     @BindView(R.id.btn_addamarker) Button btn_addamarker;
+    @BindView(R.id.btn_takeaphoto) Button btn_takeaphoto;
 
     private static final int REQUEST_LOCATION_PERMISSION = 10;
     LocationManager mLocationManager;
@@ -86,6 +87,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);
+
+        btn_takeaphoto.setEnabled(false);
 
         mLocationManager = (LocationManager)getSystemService(LOCATION_SERVICE);
         mLocationListener = new SimpleLocationListener();
@@ -252,6 +255,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             ));
         }
 
+        btn_takeaphoto.setEnabled(true);
     }
 
     private class SimpleLocationListener implements LocationListener {
