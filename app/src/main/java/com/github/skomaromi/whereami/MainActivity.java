@@ -4,7 +4,9 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
+import android.location.Address;
 import android.location.Criteria;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -16,12 +18,19 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
     @BindView(R.id.tv_latitude_value) TextView tv_latitude_value;
     @BindView(R.id.tv_longitude_value) TextView tv_longitude_value;
+    @BindView(R.id.tv_address_value) TextView tv_address_value;
+    @BindView(R.id.tv_city_value) TextView tv_city_value;
+    @BindView(R.id.tv_country_value) TextView tv_country_value;
 
     private static final int REQUEST_LOCATION_PERMISSION = 10;
     LocationManager mLocationManager;
@@ -127,6 +136,27 @@ public class MainActivity extends AppCompatActivity {
     private void updateLocationDisplay(Location location) {
         tv_latitude_value.setText(Double.toString(location.getLatitude()));
         tv_longitude_value.setText(Double.toString(location.getLongitude()));
+
+        if(Geocoder.isPresent()) {
+            Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+            try {
+                List<Address> nearbyAddresses = geocoder.getFromLocation(
+                        location.getLatitude(),
+                        location.getLongitude(),
+                        1
+                );
+
+                if(nearbyAddresses.size() > 0) {
+                    Address nearestAddress = nearbyAddresses.get(0);
+                    tv_address_value.setText(nearestAddress.getAddressLine(
+                            0
+                    ).split(",")[0]);
+                    tv_city_value.setText(nearestAddress.getLocality());
+                    tv_country_value.setText(nearestAddress.getCountryName());
+                }
+            }
+            catch (IOException e) { e.printStackTrace(); }
+        }
     }
 
     private class SimpleLocationListener implements LocationListener {

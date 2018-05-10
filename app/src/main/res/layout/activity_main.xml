@@ -50,7 +50,7 @@
         android:layout_toEndOf="@id/tv_address_label"
         android:layout_marginTop="@dimen/mainactivity_layout_defaultspacing"
         android:layout_marginStart="@dimen/mainactivity_value_marginstart"
-        android:text="George Washington Ave 21"/>
+        android:text="@string/mainactivity_value_unknown"/>
 
     <TextView
         android:id="@+id/tv_city_label"
@@ -66,7 +66,7 @@
         android:layout_below="@id/tv_address_label"
         android:layout_toEndOf="@id/tv_city_label"
         android:layout_marginStart="@dimen/mainactivity_value_marginstart"
-        android:text="Saskatoon"/>
+        android:text="@string/mainactivity_value_unknown"/>
 
     <TextView
         android:id="@+id/tv_country_label"
@@ -82,7 +82,7 @@
         android:layout_below="@id/tv_city_label"
         android:layout_toEndOf="@id/tv_country_label"
         android:layout_marginStart="@dimen/mainactivity_value_marginstart"
-        android:text="Trinidad and Tobago"/>
+        android:text="@string/mainactivity_value_unknown"/>
 
     <Button
         android:id="@+id/btn_takeaphoto"
