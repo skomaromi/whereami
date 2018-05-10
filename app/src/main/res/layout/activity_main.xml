@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/tv_latitude_label"
         android:layout_marginStart="@dimen/mainactivity_value_marginstart"
-        android:text="306.91912396"/>
+        android:text="@string/mainactivity_value_unknown"/>
 
     <TextView
         android:id="@+id/tv_longitude_label"
@@ -32,7 +32,7 @@
         android:layout_below="@id/tv_latitude_label"
         android:layout_toEndOf="@id/tv_longitude_label"
         android:layout_marginStart="@dimen/mainactivity_value_marginstart"
-        android:text="46.18609032"/>
+        android:text="@string/mainactivity_value_unknown"/>
 
     <TextView
         android:id="@+id/tv_address_label"

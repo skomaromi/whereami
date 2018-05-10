@@ -6,4 +6,5 @@
     <string name="mainactivity_label_address">Address:</string>
     <string name="mainactivity_label_city">City:</string>
     <string name="mainactivity_label_country">Country:</string>
+    <string name="mainactivity_value_unknown">-</string>
 </resources>
