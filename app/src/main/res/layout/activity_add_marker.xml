@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/spacing_default">
+
+    <TextView
+        android:id="@+id/tv_addmarker_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addmarkeractivity_label_markericon"
+        android:textAllCaps="true"/>
+    <RadioGroup
+        android:id="@+id/rg_addmarker_markericon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_addmarker_label"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rb_addmarker_type1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@android:drawable/ic_input_add"
+            android:layout_marginEnd="@dimen/spacing_default" />
+        <RadioButton
+            android:id="@+id/rb_addmarker_type2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@android:drawable/star_big_on"
+            android:layout_marginEnd="@dimen/spacing_default" />
+        <RadioButton
+            android:id="@+id/rb_addmarker_type3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@android:drawable/ic_delete" />
+    </RadioGroup>
+
+    <fragment
+        android:id="@+id/f_addmarker_googlemap"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/spacing_default"
+        android:layout_below="@id/rg_addmarker_markericon"
+        />
+
+</RelativeLayout>

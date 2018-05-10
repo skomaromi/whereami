@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/mainactivity_layout_defaultspacing">
+    android:padding="@dimen/spacing_default">
 
     <TextView
         android:id="@+id/tv_latitude_label"
@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/tv_latitude_label"
-        android:layout_marginStart="@dimen/mainactivity_value_marginstart"
+        android:layout_marginStart="@dimen/spacing_small"
         android:text="@string/mainactivity_value_unknown"/>
 
     <TextView
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_latitude_label"
         android:layout_toEndOf="@id/tv_longitude_label"
-        android:layout_marginStart="@dimen/mainactivity_value_marginstart"
+        android:layout_marginStart="@dimen/spacing_small"
         android:text="@string/mainactivity_value_unknown"/>
 
     <TextView
@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_longitude_label"
-        android:layout_marginTop="@dimen/mainactivity_layout_defaultspacing"
+        android:layout_marginTop="@dimen/spacing_default"
         android:textStyle="bold"
         android:text="@string/mainactivity_label_address"/>
     <TextView
@@ -48,8 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_longitude_label"
         android:layout_toEndOf="@id/tv_address_label"
-        android:layout_marginTop="@dimen/mainactivity_layout_defaultspacing"
-        android:layout_marginStart="@dimen/mainactivity_value_marginstart"
+        android:layout_marginTop="@dimen/spacing_default"
+        android:layout_marginStart="@dimen/spacing_small"
         android:text="@string/mainactivity_value_unknown"/>
 
     <TextView
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_address_label"
         android:layout_toEndOf="@id/tv_city_label"
-        android:layout_marginStart="@dimen/mainactivity_value_marginstart"
+        android:layout_marginStart="@dimen/spacing_small"
         android:text="@string/mainactivity_value_unknown"/>
 
     <TextView
@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_city_label"
         android:layout_toEndOf="@id/tv_country_label"
-        android:layout_marginStart="@dimen/mainactivity_value_marginstart"
+        android:layout_marginStart="@dimen/spacing_small"
         android:text="@string/mainactivity_value_unknown"/>
 
     <Button
@@ -90,13 +90,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:text="@string/mainactivity_btn_takeaphoto"/>
+    <Button
+        android:id="@+id/btn_addamarker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/btn_takeaphoto"
+        android:text="@string/mainactivity_btn_addamarker"/>
 
     <fragment
         android:id="@+id/f_googlemap"
         android:name="com.google.android.gms.maps.MapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/mainactivity_layout_defaultspacing"
+        android:layout_marginTop="@dimen/spacing_default"
         android:layout_below="@id/tv_country_label"/>
 
 </RelativeLayout>

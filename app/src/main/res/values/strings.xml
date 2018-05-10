@@ -7,4 +7,8 @@
     <string name="mainactivity_label_city">City:</string>
     <string name="mainactivity_label_country">Country:</string>
     <string name="mainactivity_value_unknown">-</string>
+    <string name="mainactivity_btn_addamarker">Add a marker</string>
+    <string name="addmarkeractivity_label_markericon">Marker icon</string>
+    <string name="addmarkeractivity_title">Add a marker</string>
+    <string name="addmarkeractivity_action_add">Add</string>
 </resources>
