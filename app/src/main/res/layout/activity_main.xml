@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/mainactivity_layout_defaultspacing">
+
+    <TextView
+        android:id="@+id/tv_latitude_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/mainactivity_label_latitude"/>
+    <TextView
+        android:id="@+id/tv_latitude_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tv_latitude_label"
+        android:layout_marginStart="@dimen/mainactivity_value_marginstart"
+        android:text="306.91912396"/>
+
+    <TextView
+        android:id="@+id/tv_longitude_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_latitude_label"
+        android:textStyle="bold"
+        android:text="@string/mainactivity_label_longitude"/>
+    <TextView
+        android:id="@+id/tv_longitude_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_latitude_label"
+        android:layout_toEndOf="@id/tv_longitude_label"
+        android:layout_marginStart="@dimen/mainactivity_value_marginstart"
+        android:text="46.18609032"/>
+
+    <TextView
+        android:id="@+id/tv_address_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_longitude_label"
+        android:layout_marginTop="@dimen/mainactivity_layout_defaultspacing"
+        android:textStyle="bold"
+        android:text="@string/mainactivity_label_address"/>
+    <TextView
+        android:id="@+id/tv_address_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_longitude_label"
+        android:layout_toEndOf="@id/tv_address_label"
+        android:layout_marginTop="@dimen/mainactivity_layout_defaultspacing"
+        android:layout_marginStart="@dimen/mainactivity_value_marginstart"
+        android:text="George Washington Ave 21"/>
+
+    <TextView
+        android:id="@+id/tv_city_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_address_label"
+        android:textStyle="bold"
+        android:text="@string/mainactivity_label_city"/>
+    <TextView
+        android:id="@+id/tv_city_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_address_label"
+        android:layout_toEndOf="@id/tv_city_label"
+        android:layout_marginStart="@dimen/mainactivity_value_marginstart"
+        android:text="Saskatoon"/>
+
+    <TextView
+        android:id="@+id/tv_country_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_city_label"
+        android:textStyle="bold"
+        android:text="@string/mainactivity_label_country"/>
+    <TextView
+        android:id="@+id/tv_country_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_city_label"
+        android:layout_toEndOf="@id/tv_country_label"
+        android:layout_marginStart="@dimen/mainactivity_value_marginstart"
+        android:text="Trinidad and Tobago"/>
+
+    <Button
+        android:id="@+id/btn_takeaphoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="@string/mainactivity_btn_takeaphoto"/>
+
+    <fragment
+        android:id="@+id/f_googlemap"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/mainactivity_layout_defaultspacing"
+        android:layout_below="@id/tv_country_label"/>
+
+</RelativeLayout>

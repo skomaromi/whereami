@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mainactivity_value_marginstart">5dp</dimen>
+    <dimen name="mainactivity_layout_defaultspacing">16dp</dimen>
+</resources>

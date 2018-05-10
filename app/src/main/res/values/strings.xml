@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Where Am I?</string>
+    <string name="mainactivity_label_latitude">Latitude:</string>
+    <string name="mainactivity_label_longitude">Longitude:</string>
+    <string name="mainactivity_btn_takeaphoto">Take a photo</string>
+    <string name="mainactivity_label_address">Address:</string>
+    <string name="mainactivity_label_city">City:</string>
+    <string name="mainactivity_label_country">Country:</string>
+</resources>
